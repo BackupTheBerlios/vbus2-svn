@@ -1,7 +1,7 @@
-n_addModel("man5.3ds")
+n_addModel("man5.ive")
 n_addModelEx("steeringWheel.ive",-0.85,8.3,1.2,20,0,0)
 n_collisionBox(-1.13809, -3.39061, 0.237674,  1.13809, 8.53558, 3)
-n_setMassMatrix(9870, 0.002, -0.011, 0.411,  0, 0, 0)
+n_setMassMatrix(9870, 0.0, 1, 0.411,  0, 0, 0)
 
 n_setOffset(0,  -0.85, 7.6, 1.65,   0, 0)
 n_setOffset(1,  -1.4, 8.5, 2.24, -10, 180)
