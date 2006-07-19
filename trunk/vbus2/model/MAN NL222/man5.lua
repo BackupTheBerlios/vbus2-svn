@@ -16,7 +16,7 @@ n_addTire("pr110-rwheel.ive", -0.87, 0.0, 0.4,  40, 0.235, 0.5, shock, spring, 0
 
 n_loadSound("engine", "engine.wav", 600, 1, 1)
 
-n_transmission(6.308, 0.75)
+n_transmission(4.308, 0.75)
 
 n_engine(1000)
 n_torqePoint(1400,1000)
@@ -55,11 +55,13 @@ function door(name, x, y, speed, anim, delay, sound_o, sound_c)
 	anim(name.."2_2", x, y, speed)
 
 	n_setDelay(name.."_c", delay)
+	n_addCommand(name.."_c", "incState", "doors", -1)
 	n_addCommand(name.."_c", "playSound", sound_c)
 	n_addCommand(name.."_c", "setAnimV", name.."1_1", -1)
 	n_addCommand(name.."_c", "setAnimV", name.."2_1", -1)
 	n_addCommand(name.."_c", "setAnimV", name.."2_2", -1)
 	n_setDelay(name.."_o", delay)
+	n_addCommand(name.."_o", "incState", "doors", 1)
 	n_addCommand(name.."_o", "playSound", sound_o)
 	n_addCommand(name.."_o", "setAnimV", name.."1_1", 1)
 	n_addCommand(name.."_o", "setAnimV", name.."2_1", 1)
@@ -117,3 +119,4 @@ n_addCommand("keyDown_f", "equal", "d3l", 1, "dsignalPlay")
 
 n_addPick("zeg","keyDown_f",0)
 --n_addPick("d1l2_1","keyDown_8",0)
+
