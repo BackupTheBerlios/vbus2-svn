@@ -42,3 +42,6 @@ end
 
 --n_createStatic("model/windgen.lua", 991, 500, 0, math.random(-45,45))
 
+
+
+n_createStatic("model/lights.lua", 650, -386, 0,  0)
